@@ -511,12 +511,12 @@ std::string CreateLogFileName(const char* szCharName, bool bCollected, bool bNee
 
 	if (bBazaar)
 	{
-		LogFileName = fmt::format("{}\\Collectible\\{}_{}_{}_{}.log", gPathLogs, (char*)__ServerName, szCharName, szCollectStatus, szLogType);
+		LogFileName = fmt::format("{}\\Collectible\\{}_{}_{}_{}.log", gPathLogs, GetServerShortName(), szCharName, szCollectStatus, szLogType);
 	}
 
 	if (bLog)
 	{
-		LogFileName = fmt::format("{}\\Collectible\\{}_{}_{}.log", gPathLogs, (char*)__ServerName, szCharName, szCollectStatus);
+		LogFileName = fmt::format("{}\\Collectible\\{}_{}_{}.log", gPathLogs, GetServerShortName(), szCharName, szCollectStatus);
 	}
 
 	WriteChatf("\n\aw[MQ2Collectible] \ayLog appended to: \aw%s\n", LogFileName);
